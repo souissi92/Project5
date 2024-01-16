@@ -23,7 +23,7 @@ jobs:
     needs: lint
     with:
       environmentType: Test
-      resourceGroupName: Project5Test
+      resourceGroupName: WebsiteTest
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID_TEST }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
@@ -35,7 +35,7 @@ jobs:
     needs: deploy-test
     with:
       environmentType: Production
-      resourceGroupName: Project5Production
+      resourceGroupName: WebsiteProduction
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID_PRODUCTION }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
